@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- The One True Awk -->
+  <key>BBEditDocumentType</key> <string>CodelessLanguageModule</string>
+  <key>BBLMLanguageDisplayName</key> <string>AWK</string>
+  <key>BBLMLanguageCode</key> <string>TOTA</string>
+  <key>BBLMSuffixMap</key>
+    <array>
+      <dict>
+        <key>BBLMLanguageSuffix</key> <string>.awk</string>
+      </dict>
+    </array>
+  <key>BBLMPreferredFilenameExtension</key> <string>awk</string>
+  <key>BBLMSupportsTextCompletion</key> <true/>
+  <key>BBLMScansFunctions</key> <true/>
+  <key>BBLMColorsSyntax</key> <true/>
+  <key>BBLMKeywordList</key>
+    <array>
+      <!-- Special Patterns -->
+      <string>BEGIN</string>
+      <string>END</string>
+      <!-- Control Statements in Actions -->
+      <string>if</string>
+      <string>else</string>
+      <string>while</string>
+      <string>for</string>
+      <string>return</string>
+      <string>in</string>
+      <string>or</string>
+      <string>exit</string>
+      <!-- Built-in Variables That Convey Information -->  
+      <string>ARGC</string>
+      <string>ARGV</string>
+      <string>CONVFMT</string>
+      <string>ENVIRON</string>
+      <string>FILENAME</string>
+      <string>FNR</string>
+      <string>FS</string>
+      <string>NF</string>
+      <string>NR</string>
+      <string>OFMT</string>
+      <string>OFS</string>
+      <string>ORS</string>
+      <string>RLENGTH</string>
+      <string>RS</string>
+      <string>RSTART</string>
+      <string>SUBSEP</string>
+      <string>SYMTAB</string>
+    </array>
+  <key>BBLMPredefinedNameList</key>
+    <array>
+      <string>func</string>
+      <string>function</string>
+      <!-- Actions -->
+      <string>break</string>
+      <string>continue</string>
+      <string>do</string>
+      <string>next</string>
+      <string>nextfile</string>
+      <string>delete</string>
+      <!-- Input-output -->
+      <string>getline</string>
+      <string>print</string>
+      <string>printf</string>
+      <string>close</string>
+      <string>fflush</string>
+      <!-- Built-in Mathematical Functions -->
+      <string>atan2</string>
+      <string>cos</string>
+      <string>exp</string>
+      <string>log</string>
+      <string>sin</string>
+      <string>sqrt</string>
+      <!-- Built-in String Functions -->
+      <string>length</string>
+      <string>rand</string>
+      <string>srand</string>
+      <string>int</string>
+      <string>substr</string>
+      <string>index</string>
+      <string>match</string>
+      <string>split</string>
+      <string>sub</string>
+      <string>gsub</string>
+      <string>asplit</string>
+      <string>sprintf</string>
+      <string>system</string>
+      <string>tolower</string>
+      <string>toupper</string>
+  </array>
+  <key>BBLMCommentLineDefault</key> <string>#</string>
+  <key>Language Features</key>
+    <dict>
+      <key>Identifier and Keyword Character Class</key> <string>a-zA-Z0-9</string>
+      <key>Comment Pattern</key>
+        <string><![CDATA[#.*?$]]></string>
+      <key>String Pattern</key>
+        <string><![CDATA["[^"\r]*?"]]></string>
+      <key>Function Pattern</key>
+        <string><![CDATA[^(?P<function>\b(?:func|function)\b[ \t]+\b(?P<function_name>[a-zA-Z_][a-zA-Z0-9_]*)\b[ \t]*\([a-zA-Z0-9_, ]*?\)\s*\{(?s:[^}]*?)\})]]></string>
+      <key>Skip Pattern</key>
+        <string><![CDATA[(?P>comment)|(?P>string)]]></string>
+    </dict>
+</dict>
+</plist>
