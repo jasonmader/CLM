@@ -23,14 +23,19 @@
       <!-- Special Patterns -->
       <string>BEGIN</string>
       <string>END</string>
-      <!-- Control Statements in Actions -->
+      <!-- Control-Flow Satements -->
       <string>if</string>
       <string>else</string>
       <string>while</string>
       <string>for</string>
-      <string>in</string>
-      <string>or</string>
+      <string>do</string>
+      <string>break</string>
+      <string>continue</string>
+      <string>return</string>
+      <string>next</string>
+      <string>nextfile</string>
       <string>exit</string>
+      <string>delete</string>
       <!-- Built-in Variables That Convey Information -->  
       <string>ARGC</string>
       <string>ARGV</string>
@@ -52,14 +57,9 @@
     </array>
   <key>BBLMPredefinedNameList</key>
     <array>
-      <!-- Actions -->
-      <string>break</string>
-      <string>continue</string>
-      <string>do</string>
-      <string>next</string>
-      <string>nextfile</string>
-      <string>delete</string>
-      <string>return</string>
+      <!-- Operators -->
+      <string>in</string>
+      <string>or</string>
       <!-- Input-output -->
       <string>getline</string>
       <string>print</string>
@@ -94,12 +94,12 @@
   <key>Language Features</key>
     <dict>
       <key>Identifier and Keyword Character Class</key> <string>a-zA-Z0-9</string>
-      <key>Keyword Pattern</key><!-- Experiment for fields -->
-        <string><![CDATA[(?:\$[0-9]+?|\$NF)\b]]></string>
+      <key>Keyword Pattern</key>
+        <string><![CDATA[\$(?:\d+|NF)\b]]></string>
       <key>Comment Pattern</key>
-        <string><![CDATA[#.*?$]]></string>
+        <string><![CDATA[#.*$]]></string>
       <key>String Pattern</key>
-        <string><![CDATA["[^"\r]*?"]]></string>
+        <string><![CDATA["(?:\\"|[^"\r]|\\\r)*?"]]></string>
       <key>Prefix for Functions</key> <string>function</string>
       <key>Prefix for Procedures</key> <string>func</string>
       <key>Open Parameter Lists</key> <string>(</string>
